@@ -4,3 +4,4 @@ seaborn
 matplotlib
 scikit-learn
 Flask
+gunicorn==20.1.0
