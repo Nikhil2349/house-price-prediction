@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import pickle
 
-app=Flask(__name__, static_folder='static')
+app = Flask(__name__, static_folder='static', template_folder='.')
 data=pd.read_csv('banglore house cleaned data.csv')
 pipe=pickle.load(open('RidgeModel.pkl','rb'))
 
