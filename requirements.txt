@@ -1,7 +1,7 @@
-pandas
-numpy
+Flask==1.1.2
+pandas==1.1.2
+numpy==1.19.2
 seaborn
 matplotlib
 scikit-learn
-Flask
 gunicorn==20.1.0
