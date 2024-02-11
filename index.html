@@ -228,11 +228,14 @@
       <form onsubmit="send_data(); return false;">
         <div class="user-box">
           <select id='location' name="location" required>
-              <option value="" disabled selected>Select Location</option>
-              {% for location in locations %}
-                  <option value="{{ location }}">{{ location }}</option>
-              {% endfor %}
-          </select>
+            {% for location in locations %}
+                {% if loop.first %}
+                    <option value="{{ location }}" selected>{{ location }}</option>
+                {% else %}
+                    <option value="{{ location }}">{{ location }}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
         </div>
         <div class="user-box">
           <input type="text" id="bhk" name="bhk" required="">
