@@ -10,7 +10,7 @@ pipe=pickle.load(open('RidgeModel.pkl','rb'))
 @app.route('/')
 def index():
     locations=sorted(data['location'].unique())
-    return render_template('index.html',locations=locations)
+    return render_template('index.html', locations=locations)
 
 @app.route('/predict',methods=['POST'])
 def predict():

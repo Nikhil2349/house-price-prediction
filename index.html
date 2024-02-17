@@ -229,12 +229,15 @@
         <div class="user-box">
           <select id='location' name="location" required>
               <option value="" disabled selected>Select Location</option>
-              {% for i in locations %}
-                  <option value="{{i}}">{{i}}</option>
-              {% endfor %}
+              {% if locations %}
+                  {% for location in locations %}
+                      <option value="{{ location }}">{{ location }}</option>
+                  {% endfor %}
+              {% else %}
+                  <option value="" disabled>No locations available</option>
+              {% endif %}
           </select>
         </div>
-      
         <div class="user-box">
           <input type="text" id="bhk" name="bhk" required="">
           <label>Enter BHK</label>
