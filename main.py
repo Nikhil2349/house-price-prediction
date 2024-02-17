@@ -25,5 +25,5 @@ def predict():
     prediction=pipe.predict(input_data)[0] * 100000
     return str(np.round(prediction,2))
 
-if __name__=="__main__":
-    app.run(debug=True, port=5881)
+if __name__ == "__main__":
+    app.run(debug=True, port=5000)
