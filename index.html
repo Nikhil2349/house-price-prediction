@@ -229,8 +229,8 @@
         <div class="user-box">
           <select id='location' name="location" required>
               <option value="" disabled selected>Select Location</option>
-              {% for location in locations %}
-                  <option value="{{ location }}">{{ location }}</option>
+              {% for i in locations %}
+                  <option value="{{i}}">{{i}}</option>
               {% endfor %}
           </select>
         </div>
