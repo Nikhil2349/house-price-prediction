@@ -227,18 +227,13 @@
       <h2>PREDICTOR</h2>
       <form onsubmit="send_data(); return false;">
         <div class="user-box">
-          <label for="location">Select Location:</label>
-          <select id="location" name="location" required>
+          <select id='location' name="location" required>
               <option value="" disabled selected>Select Location</option>
-              {% if locations %}
-                  {% for location in locations %}
-                      <option value="{{ location }}">{{ location }}</option>
-                  {% endfor %}
-              {% else %}
-                  <option value="" disabled>No locations available</option>
-              {% endif %}
+              {% for i in locations %}
+                  <option value="{{i}}">{{i}}</option>
+              {% endfor %}
           </select>
-        </div>      
+        </div>
         <div class="user-box">
           <input type="text" id="bhk" name="bhk" required="">
           <label>Enter BHK</label>
