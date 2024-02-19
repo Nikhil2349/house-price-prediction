@@ -84,6 +84,10 @@
 
         /* Media Queries for responsiveness */
 
+       /* ... (Previous styles remain unchanged) */
+
+        /* Media Queries for responsiveness */
+
         @media only screen and (max-width: 768px) {
           .content {
             width: 90%;
@@ -92,10 +96,15 @@
           }
 
           .predictor-box {
-            width: 95%;
+            width: 100%; /* Make the predictor-box full width for mobile */
+            height: 50%; /* Make the predictor-box half of the screen height for mobile */
+            left: 0;
+            top: 50%; /* Position the predictor-box in the middle of the screen */
+            transform: translateY(-50%);
             padding: 15px;
           }
         }
+
 
         html {
           height: 100%;
